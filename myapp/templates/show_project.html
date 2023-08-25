@@ -1,75 +1,75 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:teal;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="{% url 'home' %}"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}#about">About Me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}#skills">Skills</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}#portfolio">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}#education">Education</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
-                  </li>  
-                </ul>
-              </div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:teal;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'home' %}"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#about">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}#contact">Contact</a>
+              </li>  
+            </ul>
+          </div>
+        </div>
+    </nav>
+</header>
+<main style="height: 78vh; display: grid; align-content: center;">
+    <div class="container">
+        <div class="row d-flex align-items-center gy-5">
+            <div class="col-md-6 col-sm-12">
+                <h3 style="text-align: left; margin-bottom: 40px;font-weight: bold; letter-spacing: 2px;padding: 40px 0 0 0; color: orangered;" class="portfolio-headline">{{ project.title }}</h3>
+                <p style="font-size: 18px;color: gray; margin-bottom: 20px;" class="portfolio-text">{{ project.description }}</p>
+                <h5 class="portfolio-headline mb-3">Project Description:</h5>
+                <!-- Add More Description Field here. -->
+                <p style="font-size: 18px;color: gray; margin-bottom: 30px;" class="portfolio-text">{{ project.about }}</p>
+                <a href="{{project.url}}" class="btn btn-warning" target="_blank">{{project.btn}}</a>
             </div>
-        </nav>
-    </header>
-    <main style="height: 78vh; display: grid; align-content: center;">
-        <div class="container">
-            <div class="row d-flex align-items-center gy-5">
-                <div class="col-md-6 col-sm-12">
-                    <h3 style="text-align: left; margin-bottom: 40px;font-weight: bold; letter-spacing: 2px;padding: 40px 0 0 0; color: orangered;" class="portfolio-headline">{{ project.title }}</h3>
-                    <p style="font-size: 18px;color: gray; margin-bottom: 20px;" class="portfolio-text">{{ project.description }}</p>
-                    <h5 class="portfolio-headline mb-3">Project Description:</h5>
-                    <!-- Add More Description Field here. -->
-                    <p style="font-size: 18px;color: gray; margin-bottom: 30px;" class="portfolio-text">{{ project.about }}</p>
-                    <a href="{{project.url}}" class="btn btn-warning" target="_blank">{{project.btn}}</a>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="mt-2">
-                        <img src="/static/{{project.image}}.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </main>
-    
-    <footer class="border-top">
-        <div class="container py-3 pt-5">
-            <div class="row">
-                <div class="col-12 col-md-4 text-center">
-                    <p class="text-sm-center text-md-start"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <p class="text-center fw-bold">@ Made by Debasish 2022</p>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <ul class="list-inline text-md-end text-sm-center">
-                        <li class="list-inline-item"><i class="bi bi-linkedin"></i></li>
-                        <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
-                        <li class="list-inline-item"><i class="bi bi-twitter"></i></li>
-                    </ul>
+            <div class="col-md-6 col-sm-12">
+                <div class="mt-2">
+                    <img src="/static/{{project.image}}.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-    </footer>
+    </div>    
+</main>
+
+<footer class="border-top">
+    <div class="container py-3 pt-5">
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <p class="text-sm-center text-md-start"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></p>
+            </div>
+            <div class="col-12 col-md-4">
+                <p class="text-center fw-bold">@ Made by Debasish 2022</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <ul class="list-inline text-md-end text-sm-center">
+                    <li class="list-inline-item"><i class="bi bi-linkedin"></i></li>
+                    <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
+                    <li class="list-inline-item"><i class="bi bi-twitter"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 {% endblock %}
