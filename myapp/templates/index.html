@@ -2,6 +2,347 @@
 {% load static %}
 
 {% block content %}
-<img src="{% static 'war.jpg' %}" alt="War Image">
-<h1>Hello World</h1>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color:white;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'home' %}"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="
+                    {% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>  
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <div class="context" id="home">
+            <img src="{% static 'debasish.png' %}" alt="My Image" width="200px" class="img-fluid" style="border: 5px solid white;border-radius: 50%;">
+            <h1 class="headline">
+                <b>Debasish Mohanta</b>
+            </h1>
+    
+            <div style="font-size: 30px;text-align: center;" class="web">
+                <i><span id="typed"></span></i>
+            </div>
+            <p class="tagline">
+                persuing Bachelor's Degree in the field of Computer Science and Engineering(CSE) at 
+                <span class="punchline">Lovely Professional University.</span>
+            </p>
+            <br>
+            <br>
+            <button class="btn btn-primary btn-lg" style="border-radius: 3px;">Explore More</button>
+    
+        </div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <div class="container" style="margin: 100px 0; padding: 50px 0;width: 80%; margin: 100px auto;" id="about">
+            <h3 style="text-align: left; margin-bottom: 70px;font-weight: bold; letter-spacing: 2px;" class="about-headline">About <span style="color: orangered;">Me</span></h3>
+            <div class="row gy-5 d-flex align-items-center">
+                <div class="col-md-6">
+                    <h2 style="font-weight: bold; margin-bottom: 30px;" class="about-tagline">A Passonate Front-end and Back-end Developer.</h2>
+                    <p style="font-size: 18px;color: gray; margin-bottom: 50px;" class="about-text">Hello! I'm Debasish Mohanta. I'm a web developer, and I'm very passionate and dedicated to my work. With 2 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+                    <button class="btn btn-large text-light about-btn" style="background-color: #D1701F;">Download CV</button>
+                </div>
+                <div class="col-md-4 offset-lg-2">
+                    <div class="stacked-cards">
+                        <!-- Repeat if you want to have more cards -->
+                        <div class="stacked-cards__card">
+                            <div class="card shadow-lg">
+                                <img src="{% static 'header.jpg' %}" alt="" class="img-fluid card-image inner-card-img">
+                            </div>
+                        </div>
+                    
+                        <!-- Main card's content -->
+                        <div class="card shadow-lg" style="background-color: orangered;">
+                            <img src="{% static 'header.jpg' %}" alt="" class="img-fluid card-image inner-card-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- My Sills -->
+
+        <div class="container" style="margin: 100px 0; padding: 50px 0;width: 80%; margin: 100px auto;" id="skills">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <h3 class="skills-headline" style="margin-bottom: 70px;font-weight: bold; letter-spacing: 2px;">My <span style="color: orangered;">Skills</span></h3>
+                </div>
+            </div>
+            <div class="row gy-5 d-flex align-items-center">
+                <div class="col-md-6">
+                    <div class="row gy-5">
+                        <div class="col-md-4" style="margin-bottom: 10px;">
+                            <div class="card shadow skills-card" style="background-color: #D1701F; color:white;padding: 10px 10px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Development</h5>
+                                    <i style="font-size: 50px;" class="bi bi-terminal-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offset-md-2 up">
+                            <div class="card shadow skills-card" style="background-color: #D1701F; color:white;padding: 10px 10px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Design</h5>
+                                    <i style="font-size: 50px;" class="bi bi-vector-pen"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="margin-bottom: 10px;">
+                            <div class="card shadow skills-card" style="background-color: #D1701F; color:white;padding: 10px 10px;">
+                                <div class="card-body ">
+                                    <h5 class="card-title">Maintain</h5>
+                                    <i style="font-size: 50px;" class="bi bi-gear-wide-connected"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offset-md-2 up">
+                            <div class="card shadow skills-card" style="background-color: #D1701F; color:white;padding: 10px 10px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Quality</h5>
+                                    <i style="font-size: 50px;" class="bi bi-award-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div>
+                        <h2 style="font-weight: bold; margin-bottom: 30px;" class="skills-tagline">I have high skills in development and programming</h2>
+                        <p class="skills-text" style="font-size: 18px;color: gray; margin-bottom: 50px;" class="about-text">For more than 2 years I have been accomplishing enough with modern Web Development, new generation programming language, and Full Stack developers to deliver cost-effective solutions.</p>
+
+                        
+
+                        <div style="margin-bottom: 20px;" class="skills-progress">
+                            <h5 style="margin-bottom: 10px;">Web Development <span style="float: right;">90%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px;" class="skills-progress">
+                            <h5 style="margin-bottom: 10px;">Programming Language<span style="float: right;">85%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-progress">
+                            <h5 style="margin-bottom: 10px;">Django <span style="float: right;">75%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div style="background-color: #F9F9F9;" id="portfolio">
+            <h3 style="text-align: left; margin-bottom: 70px;font-weight: bold; letter-spacing: 2px;width: 80%; margin:0 auto;padding: 100px 0 0 0;" class="portfolio-headline">My <span style="color: orangered;">Portfolio</span></h3>
+            <p style="font-size: 18px;color: gray; margin-bottom: 50px;width: 80%; margin: 10px auto;" class="portfolio-text">For more than 2 years I have been accomplishing enough with modern Web Development,<br>Here are some of my Projects you may Like.</p>
+
+            <div class="owl-carousel" style="width: 80%; margin: 100px auto;">
+                {% for project in projects %}
+                    <div class="card">
+                        <img src="/static/{{project.image}}.png" class="card-img-top img-fluid" alt="card-image">
+                        <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{% url 'portfolio' pk=project.pk %}" style="text-decoration: none; color: teal">
+                                {{project.title}}
+                            </a>
+                        </h5>
+                        <p class="card-text">{{project.description}}</p>
+                        <a href="{{project.url}}" class="btn btn-danger" target="_blank">{{project.btn}}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+            <br>
+        </div>
+        <br>
+        <!-- Education Section  -->
+        <div class="container" style="margin: 100px 0; padding: 50px 0;width: 80%; margin: 100px auto;" id="education">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6">
+                    <h3 class="education-headline" style="margin-bottom: 70px;font-weight: bold; letter-spacing: 2px;">My <span style="color: orangered;">Education</span></h3>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-md-6">
+                    <img src="{% static 'SIMOC.webp' %}" alt="" class="img-fluid achievement-1" style="margin-bottom: 50px;">
+                    <img src="{% static 'Topperlist.webp' %}" alt="" class="img-fluid achievement-2">
+                </div>
+
+                <div class="col-md-6">
+                    <div>
+                        <h2 style="font-weight: bold; margin-bottom: 30px;" class="education-tagline">Here where I 've studied till now & achived many skills.</h2>
+                        <p class="education-text" style="font-size: 18px;color: gray; margin-bottom: 50px;" class="about-text">For more than 10 years I have been improved my Educationcal Skills through these Institutes.</p>
+
+                        
+
+                        <div class="timeline">
+                            <div class="timeline__line"></div>
+                        
+
+                            <div class="timeline__items">
+           
+                                <div class="timeline__item">
+                
+                                    <div class="timeline__top">
+                              
+                                        <div class="timeline__circle"></div>
+                        
+                                     
+                                        <div class="timeline__title">
+                                            <h4>Lovely Professional University (2020 - Present)</h4>
+                                        </div>
+                                    </div>
+                        
+                          
+                                    <div class="timeline__desc">
+                                        <p>Currently I'm persuing Bachelor's degree here in CSE.I have learned many Programming Languages like Python, Java etc here.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline__item">
+                                   
+                                    <div class="timeline__top">
+                                        
+                                        <div class="timeline__circle"></div>
+                        
+                                       
+                                        <div class="timeline__title">
+                                            <h4>Lord Buddha Public School (2018 - 2020)</h4>
+                                        </div>
+                                    </div>
+                        
+                                 
+                                    <div class="timeline__desc">
+                                        <p>I have completed my Senior Secondary Schooling at LBS public School,Kota and achieved more than 80%.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline__item">
+                                   
+                                    <div class="timeline__top">
+                                        
+                                        <div class="timeline__circle"></div>
+                        
+                                       
+                                        <div class="timeline__title">
+                                            <h4>Rtapalli Vidyapitha (2013-2018)</h4>
+                                        </div>
+                                    </div>
+                        
+                                 
+                                    <div class="timeline__desc">
+                                        <p>I have completed my Higher Secondary Schooling from Rtapalli Vidyapitha,Khurdha.I have achieved many Olympiads like SASMO, SIMOC, RMO etc. here and passed with 10 CGPA.</p>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Contact -->
+
+        <div class="bg-light" style="margin: 0; padding: 150px 0;" id="contact">
+            <div class="container">
+                <h3 style="text-align: left; margin-bottom: 70px;font-weight: bold; letter-spacing: 2px;" class="contact-headline">Contact <span style="color: orangered;">Me</span></h3>
+                <div class="row gy-5 d-flex align-items-center">
+                    <div class="col-md-6">
+                        <h2 style="font-weight: bold; margin-bottom: 30px;" class="contact-tagline">Do you want to share all of dreams with me? let's connect and grow together!</h2>
+                        <p style="font-size: 18px;color: gray; margin-bottom: 50px;" class="contact-text">Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday.
+                        </p>
+
+                        <div class="my-4 contact-list" style="font-size: 20px;">
+                            <p><span style="font-weight: bold; color: brown;"><i class="bi bi-telephone-plus-fill"></i> Phone No:</span> (+91) 8018348919</p>
+                            <p><span style="font-weight: bold; color: brown;"><i class="bi bi-envelope-check-fill"></i> Email:</span> debasish2018rta@gmail.com</p>
+                            <p><span style="font-weight: bold; color: brown;"><i class="bi bi-geo-alt-fill"></i> Location:</span> Bhubaneswar, Odisha</p>
+                            <p><span style="font-weight: bold; color: brown;"><i class="bi bi-globe2"></i> Website: </span>www.debasishmohanta.netlify.app</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-lg-1">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            <button id="button"> Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </main>
+    <footer class="border-top">
+        <div class="container py-3 pt-5">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <p class="text-sm-center text-md-start"><span class="text-white fw-bold bg-danger pb-1 px-2 rounded-1">Debasish</span> <span class="fw-bold">Mohanta</span></p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p class="text-center fw-bold">@ Made by Debasish 2023</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <ul class="list-inline text-md-end text-sm-center">
+                        <li class="list-inline-item"><i class="bi bi-linkedin"></i></li>
+                        <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
+                        <li class="list-inline-item"><i class="bi bi-twitter"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}
